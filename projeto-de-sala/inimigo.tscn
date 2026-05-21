@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cbo1aa51s5q4g"]
+
+[ext_resource type="Script" uid="uid://bdxtfujnpmjgt" path="res://inimigo.gd" id="1_0b8xr"]
+[ext_resource type="Texture2D" uid="uid://cf7uqxydeojv1" path="res://asstes/10 Sem Título_20260512105113.png" id="2_g45jm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_enrbn"]
+radius = 24.186768
+
+[node name="inimigo" type="CharacterBody2D" unique_id=2068152984]
+rotation = 3.1710029
+script = ExtResource("1_0b8xr")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=2013873549]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1451941543]
+position = Vector2(-1.1465912, -4.9684296)
+shape = SubResource("CircleShape2D_enrbn")
+
+[node name="corpo" type="Sprite2D" parent="." unique_id=1089436312]
+position = Vector2(-1.0583794, -1.9697294)
+rotation = 3.1458786
+scale = Vector2(0.09536312, 0.07823772)
+texture = ExtResource("2_g45jm")
+region_enabled = true
+region_rect = Rect2(819, 873, 434, 426)
+
+[node name="braco esquerdo" type="Sprite2D" parent="." unique_id=2027581372]
+position = Vector2(24.386366, -21.226282)
+rotation = 0.015382767
+scale = Vector2(0.121738456, 0.08125108)
+texture = ExtResource("2_g45jm")
+region_enabled = true
+region_rect = Rect2(1290, 275, 206, 666)
+
+[node name="braco direito" type="Sprite2D" parent="." unique_id=932596987]
+position = Vector2(-21.487679, -20.661947)
+scale = Vector2(0.11881248, 0.08109878)
+texture = ExtResource("2_g45jm")
+region_enabled = true
+region_rect = Rect2(504, 275, 206, 666)

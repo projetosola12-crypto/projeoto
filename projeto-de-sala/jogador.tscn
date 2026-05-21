@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://da516d3iajo6t"]
+
+[ext_resource type="Script" uid="uid://bxhhr84k5i1o1" path="res://jogador.gd" id="1_q2130"]
+[ext_resource type="Texture2D" uid="uid://d3t7jpgq812yr" path="res://asstes/Skins.png" id="2_4obgb"]
+[ext_resource type="PackedScene" uid="uid://3126gthr2rcl" path="res://balas.tscn" id="2_j3kwt"]
+[ext_resource type="Texture2D" uid="uid://ce3uh8eayvr5h" path="res://asstes/Weapons.png" id="3_j3kwt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xswob"]
+radius = 52.14208
+
+[node name="Jogador" type="CharacterBody2D" unique_id=1596738123]
+rotation = 0.051481016
+scale = Vector2(0.5, 0.5)
+skew = 0.0017453292
+script = ExtResource("1_q2130")
+bala_cena = ExtResource("2_j3kwt")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=835684885]
+position = Vector2(3.8146973e-06, 0)
+rotation = -1.5470692
+scale = Vector2(1.0000002, 1)
+
+[node name="corpo" type="Sprite2D" parent="Node2D" unique_id=1993559097]
+position = Vector2(0.15026999, 1.9941633)
+rotation = -0.020361193
+scale = Vector2(0.5036427, 0.47080472)
+texture = ExtResource("2_4obgb")
+region_enabled = true
+region_rect = Rect2(1971, 1365, 197, 105)
+
+[node name="mochila" type="Sprite2D" parent="Node2D" unique_id=437732486]
+position = Vector2(-5.791767, -23.622486)
+scale = Vector2(0.32103336, 0.3582338)
+texture = ExtResource("2_4obgb")
+region_enabled = true
+region_rect = Rect2(1967, 1206, 205, 140)
+
+[node name="cabeca" type="Sprite2D" parent="Node2D" unique_id=974440184]
+position = Vector2(-3.6880035, 4.295845)
+scale = Vector2(0.3612171, 0.36800867)
+texture = ExtResource("2_4obgb")
+region_enabled = true
+region_rect = Rect2(2187, 1194, 165, 165)
+
+[node name="branco direito" type="Sprite2D" parent="Node2D" unique_id=841343968]
+position = Vector2(-43.914608, 29.460638)
+scale = Vector2(0.5840099, 0.37601015)
+texture = ExtResource("2_4obgb")
+region_enabled = true
+region_rect = Rect2(2421, 1220, 103, 199)
+
+[node name="branco esquerdo" type="Sprite2D" parent="Node2D" unique_id=1835814854]
+position = Vector2(25.18812, 28.14426)
+scale = Vector2(0.371999, 0.3518667)
+texture = ExtResource("2_4obgb")
+region_enabled = true
+region_rect = Rect2(2601, 1203, 132, 243)
+
+[node name="arma" type="Sprite2D" parent="Node2D" unique_id=320596698]
+position = Vector2(-8.891418, 94.95591)
+scale = Vector2(0.43630612, 0.2938408)
+texture = ExtResource("3_j3kwt")
+region_enabled = true
+region_rect = Rect2(1478, 445, 71, 365)
+
+[node name="Label" type="Label" parent="." unique_id=1469625606]
+offset_left = 360.0
+offset_top = 120.0
+offset_right = 400.0
+offset_bottom = 143.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=320069490]
+position = Vector2(0.106399536, 1.9973602)
+shape = SubResource("CircleShape2D_xswob")
+
+[node name="ponta_arma" type="Marker2D" parent="." unique_id=385062522]
+position = Vector2(104.81049, 12.62451)
